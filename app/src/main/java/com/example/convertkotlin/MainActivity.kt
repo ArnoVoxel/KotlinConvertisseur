@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.service.autofill.OnClickAction
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +37,8 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this,R.string.erreur_montant, Toast.LENGTH_SHORT).show()
                     }
                     Toast.makeText(this,"le montant à convertir est "+result, Toast.LENGTH_SHORT).show()
+                    var euro = findViewById<ImageView>(R.id.symbolEuro)
+                    euro.animate().setDuration(500).rotationXBy(360F)
 
                 }
 
